@@ -17,12 +17,13 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/navbar.css" />
-    <link rel="stylesheet" href="/css/hero.css" />
-    <link rel="stylesheet" href="/css/about.css" />
-    <link rel="stylesheet" href="/css/experience.css" />
-    <link rel="stylesheet" href="/css/projects.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/navbar.css" />
+    <link rel="stylesheet" href="./css/hero.css" />
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/experience.css" />
+    <link rel="stylesheet" href="./css/projects.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -270,8 +271,21 @@
     </section>
     <!-- Footer -->
     <footer>
-      <div class="footer-content">
-        <p>Web Developer</p>
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h2>Portofolio</h2>
+        </div>
+        <nav class="footer-nav">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="footer-bottom">
+          <p>@2026 build by <span class="footer-name">Raka Restu</span></p>
+        </div>
       </div>
     </footer>
 
@@ -287,7 +301,7 @@
     <script>
       tippy("#image-profile", {
         theme: "light",
-        content: "Raka Restu Saputra - 247006111172",
+        content: "Raka Restu Saputra",
       });
     </script>
   </body>
