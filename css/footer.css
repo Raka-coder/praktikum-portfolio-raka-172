@@ -60,6 +60,30 @@ footer {
     font-weight: 700;
 }
 
+.footer-social-link {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: end;
+    gap: 1.2rem;
+}
+
+.footer-social-link li a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social-link li a:hover {
+    color: var(--text-primary);
+}
+
+.footer-social-link li a .icon-github, .footer-social-link li a .icon-linkedin{
+    font-size: 1.2rem;
+}
+
 @media screen and (max-width: 768px) {
     footer {
         padding: 3rem 5% 1.5rem;
