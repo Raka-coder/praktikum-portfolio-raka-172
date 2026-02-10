@@ -99,7 +99,7 @@
     transform: translateY(-2px);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
     .hero-content {
         flex-direction: column;
         text-align: center;
@@ -116,5 +116,23 @@
 
     .hero-content-button {
         justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-content-button {
+        flex-direction: column;
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .primary-button, .outline-button {
+        text-align: center;
     }
 }

@@ -92,4 +92,7 @@ footer {
     .footer-container {
         gap: 2rem;
     }
+    .footer-nav .footer-nav-list {
+        flex-direction: column;
+    }
 }

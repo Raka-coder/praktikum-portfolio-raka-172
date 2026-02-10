@@ -1,3 +1,23 @@
+// Mobile Menu Toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".navbar ul li a");
+
+if (menuToggle && navMenu) {
+  menuToggle.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Close menu when a link is clicked
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+      menuToggle.classList.remove("active");
+    });
+  });
+}
+
 // Tab Switching Logic
 const tabs = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".tab-panel");
@@ -20,12 +40,6 @@ const submitBtn = form.querySelector('button[type="submit"]');
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-
-  if (!form.checkValidity()) {
-    alert("Please fill out all fields correctly before submitting.");
-    return;
-  }
-
   const formData = new FormData(form);
   formData.append("access_key", "e5dc04cf-8e1a-4111-950b-e946074221c3");
 

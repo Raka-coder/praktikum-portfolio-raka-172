@@ -31,10 +31,13 @@
     <link rel="stylesheet" href="./css/footer.css" />
   </head>
   <body>
-    <!-- Navbar -->
     <header class="navbar">
       <h2>Portofolio</h2>
-      <nav>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+        <span class="material-symbols-outlined"> menu </span>
+        <span class="material-symbols-outlined"> close </span>
+      </button>
+      <nav id="nav-menu">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
@@ -287,7 +290,7 @@
               name="access_key"
               value="e5dc04cf-8e1a-4111-950b-e946074221c3"
             />
-            <input type="hidden" name="from_name" value="Portfolio">
+            <input type="hidden" name="from_name" value="Portfolio" />
             <div class="form-group">
               <label for="name">Name</label>
               <input
@@ -317,6 +320,7 @@
                 required
               ></textarea>
             </div>
+            <!-- hcaptcha -->
             <div class="form-group">
               <div class="h-captcha" data-captcha="true"></div>
             </div>
@@ -332,19 +336,23 @@
           <h2>Portofolio</h2>
         </div>
         <nav class="footer-nav">
-          <ul>
+          <ul class="footer-nav-list">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
           <div class="footer-social-link">
-            <ul>
+            <ul class="footer-social-link-list">
               <li>
-                <a href="https://github.com/Raka-coder"><div class="icon-github"></div></a>
+                <a href="https://github.com/Raka-coder"
+                  ><div class="icon-github"></div
+                ></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/raka-restu-saputra/"><div class="icon-linkedin"></div></a>
+                <a href="https://www.linkedin.com/in/raka-restu-saputra/"
+                  ><div class="icon-linkedin"></div
+                ></a>
               </li>
             </ul>
           </div>
@@ -382,6 +390,7 @@
     <script>
       window.onload = function () {
         document.getElementById("contact-form").reset();
+        alert("Welcome to my portfolio!");
       };
     </script>
   </body>

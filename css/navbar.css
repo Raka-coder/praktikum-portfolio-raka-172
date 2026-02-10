@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1.2rem 5%;
     background-color: var(--bg-accent);
     position: sticky;
     top: 0;
@@ -16,6 +16,44 @@
     font-weight: 700;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.menu-toggle .material-symbols-outlined {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Initially hide the close icon */
+.menu-toggle span:last-child {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+/* When active, show close and hide menu */
+.menu-toggle.active span:first-child {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.menu-toggle.active span:last-child {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg);
+}
+
 .navbar ul {
     display: flex;
     list-style: none;
@@ -26,10 +64,48 @@
     text-decoration: none;
     color: var(--text-muted);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     transition: color 0.3s ease;
 }
 
 .navbar ul li a:hover {
     color: var(--text-primary);
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: var(--bg-accent);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        z-index: 1000;
+        border-left: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar nav.active {
+        right: 0;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
 }
