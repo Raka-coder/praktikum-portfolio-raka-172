@@ -364,32 +364,30 @@
     </footer>
 
     <!-- Script -->
-    <script src="/js/script.js"></script>
-    <!-- Development -->
-    <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
-    <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+    <script src="js/script.js"></script>
 
-    <!-- Production -->
+    <!-- Production Dependencies -->
     <script src="https://unpkg.com/@popperjs/core@2"></script>
     <script src="https://unpkg.com/tippy.js@6"></script>
-
-    <!-- Development version -->
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-
-    <!-- Production version -->
     <script src="https://unpkg.com/lucide@latest"></script>
-
     <script src="https://web3forms.com/client/script.js" async defer></script>
 
     <script>
+      // Initialize Tippy
       tippy("#image-profile", {
         theme: "light",
         content: "Raka Restu Saputra",
       });
-    </script>
-    <script>
+
+      // Form reset on load
+      window.addEventListener("load", () => {
+        const contactForm = document.getElementById("contact-form");
+        if (contactForm) {
+          contactForm.reset();
+        }
+      });
+
       window.onload = function () {
-        document.getElementById("contact-form").reset();
         alert("Welcome to my portfolio!");
       };
     </script>
